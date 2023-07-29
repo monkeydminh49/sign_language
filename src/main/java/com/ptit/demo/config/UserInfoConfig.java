@@ -1,8 +1,8 @@
 package com.ptit.demo.config;
 
 import com.ptit.demo.entity.User;
-import com.ptit.demo.user.UserInfoUserDetails;
-import com.ptit.demo.user.UserRepository;
+import com.ptit.demo.component.UserInfoUserDetails;
+import com.ptit.demo.repository.UserRepository;
 import com.ptit.demo.user.UserRole;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

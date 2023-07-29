@@ -1,4 +1,4 @@
-package com.ptit.demo.user;
+package com.ptit.demo.component;
 
 import com.ptit.demo.entity.User;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,5 +1,7 @@
 package com.ptit.demo.controller;
 
+import com.ptit.demo.dto.JwtResponse;
+import com.ptit.demo.dto.RegisterRequest;
 import com.ptit.demo.service.UserService;
 import com.ptit.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +25,8 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody User user) {
-        return userService.registerUser(user);
+    public JwtResponse registerUser(@RequestBody RegisterRequest request) {
+        return userService.register(request);
     }
 
     @GetMapping("/user/{id}")
