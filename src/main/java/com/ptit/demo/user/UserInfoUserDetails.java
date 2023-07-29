@@ -1,30 +1,36 @@
 package com.ptit.demo.user;
 
+import com.ptit.demo.entity.User;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
-@Service
 public class UserInfoUserDetails implements UserDetails {
 
     private String name;
     private final String email;
     private final String password;
-//    private List<Role> roles;
+    private List<GrantedAuthority> authorities;
 
-    public UserInfoUserDetails(UserInfo userInfo) {
-        this.name = userInfo.getName();
-        this.email = userInfo.getEmail();
-        this.password = userInfo.getPassword();
-//        this.roles = userInfo.getRoles();
+    public UserInfoUserDetails(User user) {
+        this.name = user.getName();
+        this.email = user.getEmail();
+        this.password = user.getPassword();
+        this.authorities = Collections.singletonList(
+                new SimpleGrantedAuthority(user.getRole().name())
+        );
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return authorities;
     }
 
     @Override
