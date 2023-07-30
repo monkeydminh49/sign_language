@@ -1,5 +1,6 @@
 package com.ptit.demo.service;
 
+import com.ptit.demo.component.UserInfoUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -57,6 +58,10 @@ public class JwtService {
         return buildToken(extraClaims, userDetails, expiration);
     }
 
+    public String generateRefreshToken(UserInfoUserDetails userDetails) {
+        return buildToken(new HashMap<>(), userDetails, refreshExpiration);
+    }
+
     public String buildToken(
             Map<String, Object> extraClaims,
             UserDetails userDetails,
@@ -84,4 +89,5 @@ public class JwtService {
     public boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
+
 }

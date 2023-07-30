@@ -36,7 +36,7 @@ public class UserInfoConfig {
                     UserRole.ROLE_ADMIN
             );
 
-            System.out.println(new UserInfoUserDetails(admin).getAuthorities());
+//            System.out.println(new UserInfoUserDetails(admin).getAuthorities());
 
             repository.saveAll(List.of(admin, user));
         };

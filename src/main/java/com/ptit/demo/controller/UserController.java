@@ -24,10 +24,6 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/register")
-    public JwtResponse registerUser(@RequestBody RegisterRequest request) {
-        return userService.register(request);
-    }
 
     @GetMapping("/user/{id}")
     @PreAuthorize("hasAuthority('ROLE_USER')")
