@@ -25,7 +25,7 @@ public class UserInfoConfig {
                     "Minh",
                     "minh@minh.com",
                     passwordEncoder.encode("123456"),
-                    UserRole.ROLE_USER
+                    List.of(UserRole.ROLE_USER)
             );
 
             User user = new User(
@@ -33,7 +33,7 @@ public class UserInfoConfig {
                     "ndm",
                     "ndm@minh.com",
                     passwordEncoder.encode("123456"),
-                    UserRole.ROLE_ADMIN
+                    List.of(UserRole.ROLE_ADMIN)
             );
 
 //            System.out.println(new UserInfoUserDetails(admin).getAuthorities());

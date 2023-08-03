@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Builder
 @Data
 @NoArgsConstructor
@@ -29,7 +31,7 @@ public class User {
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
-    private UserRole role;
+    private List<UserRole> roles;
 
 }
 

@@ -23,9 +23,9 @@ public class UserInfoUserDetails implements UserDetails {
         this.name = user.getName();
         this.email = user.getEmail();
         this.password = user.getPassword();
-        this.authorities = Collections.singletonList(
-                new SimpleGrantedAuthority(user.getRole().name())
-        );
+        this.authorities = user.getRoles().stream().map(
+                role -> new SimpleGrantedAuthority(role.name())
+        ).collect(Collectors.toList());
     }
 
     @Override

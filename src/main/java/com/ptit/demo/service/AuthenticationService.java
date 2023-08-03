@@ -18,6 +18,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @Controller
 @RestController
 @RequestMapping("/api/v1")
@@ -36,7 +38,7 @@ public class AuthenticationService {
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(encoder.encode(request.getPassword()))
-                .role(UserRole.ROLE_USER)
+                .roles(List.of(UserRole.ROLE_USER))
                 .build();
 
         User userExists = repository.findByEmail(user.getEmail()).orElse(null);
