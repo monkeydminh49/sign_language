@@ -1,0 +1,226 @@
+[
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 1,
+    "STT": 1,
+    "Tiếng Việt": "Bệnh nhân ",
+    "Tiếng Anh": "Patient"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 1,
+    "STT": 2,
+    "Tiếng Việt": "Cách ly",
+    "Tiếng Anh": "Isolation"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 1,
+    "STT": 3,
+    "Tiếng Việt": "Khu vực cách ly",
+    "Tiếng Anh": "Isolation area "
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 1,
+    "STT": 4,
+    "Tiếng Việt": "Ho",
+    "Tiếng Anh": "Cough"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 2,
+    "STT": 5,
+    "Tiếng Việt": "Lây bệnh",
+    "Tiếng Anh": "Infect"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 2,
+    "STT": 6,
+    "Tiếng Việt": "Nôn ói",
+    "Tiếng Anh": "Vomiting"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 2,
+    "STT": 7,
+    "Tiếng Việt": "Phục hồi",
+    "Tiếng Anh": "Recover"
+  },
+  {
+    "Chủ đề": "Sức khỏe",
+    "Cấp độ": 2,
+    "STT": 8,
+    "Tiếng Việt": "Ủ bệnh",
+    "Tiếng Anh": "Incubation"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 1,
+    "STT": 9,
+    "Tiếng Việt": "Thích",
+    "Tiếng Anh": "Like"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 1,
+    "STT": 10,
+    "Tiếng Việt": "Thương",
+    "Tiếng Anh": "Affectionate"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 1,
+    "STT": 11,
+    "Tiếng Việt": "Ghét",
+    "Tiếng Anh": "Hate"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 1,
+    "STT": 12,
+    "Tiếng Việt": "Yêu",
+    "Tiếng Anh": "Love"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 2,
+    "STT": 13,
+    "Tiếng Việt": "Lo lắng",
+    "Tiếng Anh": "Worry"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 2,
+    "STT": 14,
+    "Tiếng Việt": "Nói xấu",
+    "Tiếng Anh": "Backbite"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 2,
+    "STT": 15,
+    "Tiếng Việt": "An ủi",
+    "Tiếng Anh": "Appease"
+  },
+  {
+    "Chủ đề": "Tình cảm",
+    "Cấp độ": 2,
+    "STT": 16,
+    "Tiếng Việt": "Hâm mộ",
+    "Tiếng Anh": "Fan"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 1,
+    "STT": 17,
+    "Tiếng Việt": "Dạy dỗ",
+    "Tiếng Anh": "Tech"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 1,
+    "STT": 18,
+    "Tiếng Việt": "Giúp",
+    "Tiếng Anh": "Help"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 1,
+    "STT": 19,
+    "Tiếng Việt": "Nghỉ ngơi",
+    "Tiếng Anh": "Rested"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 1,
+    "STT": 20,
+    "Tiếng Việt": "Phạt",
+    "Tiếng Anh": "Punish"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 2,
+    "STT": 21,
+    "Tiếng Việt": "Áp dụng",
+    "Tiếng Anh": "Apply"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 2,
+    "STT": 22,
+    "Tiếng Việt": "Chấp nhận",
+    "Tiếng Anh": "Accept"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 2,
+    "STT": 23,
+    "Tiếng Việt": "Phỏng vấn",
+    "Tiếng Anh": "Interview"
+  },
+  {
+    "Chủ đề": "Khác",
+    "Cấp độ": 2,
+    "STT": 24,
+    "Tiếng Việt": "Xin phép",
+    "Tiếng Anh": "Ask for permission"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 25,
+    "Tiếng Việt": "Biết",
+    "Tiếng Anh": "Know"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 26,
+    "Tiếng Việt": "Cần",
+    "Tiếng Anh": "Need"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 27,
+    "Tiếng Việt": "Chờ",
+    "Tiếng Anh": "Wait"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 28,
+    "Tiếng Việt": "Nhớ",
+    "Tiếng Anh": "Mind"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 29,
+    "Tiếng Việt": "Băn khoăn",
+    "Tiếng Anh": "Wonder"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 30,
+    "Tiếng Việt": "Lạc",
+    "Tiếng Anh": "Lost"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 31,
+    "Tiếng Việt": "Thăm",
+    "Tiếng Anh": "Visit"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 32,
+    "Tiếng Việt": "Ủng hộ",
+    "Tiếng Anh": "Donate"
+  }
+]

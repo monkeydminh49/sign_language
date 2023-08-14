@@ -1,14 +1,11 @@
 package com.ptit.demo.entity;
 
-import com.ptit.demo.user.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Builder
 @Data
@@ -17,10 +14,10 @@ import java.util.List;
 @Component
 @Entity
 @Table(
-        name = "USERS"
+        name = "LEVELS"
 //        uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})}
 )
-public class User {
+public class Level {
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY
@@ -28,10 +25,6 @@ public class User {
     private Long id;
     @Column(unique = true)
     private String name;
-    private String email;
-    private String password;
-    @Enumerated(EnumType.STRING)
-    private List<UserRole> roles;
 
 }
 
