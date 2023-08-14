@@ -1,6 +1,7 @@
 package com.ptit.demo.controller;
 
 import com.ptit.demo.dto.JwtResponse;
+import com.ptit.demo.dto.MappingResponse;
 import com.ptit.demo.dto.RegisterRequest;
 import com.ptit.demo.service.UserService;
 import com.ptit.demo.entity.User;
@@ -20,14 +21,24 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/user")
-    public List<User> getUsers() {
-        return userService.getAllUsers();
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public MappingResponse getUsers() {
+        List<User> users = userService.getAllUsers();
+        return MappingResponse.builder()
+                .status("ok")
+                .body(users)
+                .message("Get users successfully")
+                .build();
     }
 
-
     @GetMapping("/user/{id}")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
-    public User getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    public MappingResponse getUserById(@PathVariable Long id) {
+        User user = userService.getUserById(id);
+        return MappingResponse.builder()
+                .status("ok")
+                .body(user)
+                .message("Get user with id = " +  id + " successfully")
+                .build();
     }
 }

@@ -1,5 +1,6 @@
 package com.ptit.demo.config;
 
+import com.ptit.demo.entity.Token;
 import com.ptit.demo.entity.User;
 import com.ptit.demo.component.UserInfoUserDetails;
 import com.ptit.demo.repository.UserRepository;
@@ -25,7 +26,8 @@ public class UserInfoConfig {
                     "Minh",
                     "minh@minh.com",
                     passwordEncoder.encode("123456"),
-                    List.of(UserRole.ROLE_USER)
+                    List.of(UserRole.ROLE_USER),
+                    List.of()
             );
 
             User user = new User(
@@ -33,7 +35,8 @@ public class UserInfoConfig {
                     "ndm",
                     "ndm@minh.com",
                     passwordEncoder.encode("123456"),
-                    List.of(UserRole.ROLE_ADMIN)
+                    List.of(UserRole.ROLE_ADMIN),
+                    List.of()
             );
 
 //            System.out.println(new UserInfoUserDetails(admin).getAuthorities());

@@ -26,12 +26,15 @@ public class User {
             strategy = GenerationType.IDENTITY
     )
     private Long id;
-    @Column(unique = true)
     private String name;
+    @Column(unique = true)
     private String email;
     private String password;
     @Enumerated(EnumType.STRING)
     private List<UserRole> roles;
+
+    @OneToMany(mappedBy = "user")
+    private List<Token> tokens;
 
 }
 

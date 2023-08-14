@@ -1,17 +1,11 @@
 package com.ptit.demo.controller;
 
-import com.ptit.demo.dto.JwtResponse;
-import com.ptit.demo.dto.LoginRequest;
-import com.ptit.demo.dto.RefreshTokenRequest;
-import com.ptit.demo.dto.RegisterRequest;
+import com.ptit.demo.dto.*;
 import com.ptit.demo.service.AuthenticationService;
 import com.ptit.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RestController
@@ -20,19 +14,40 @@ public class AuthenticationController {
 
     @Autowired
     private AuthenticationService authenticationServiceService;
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Welcome to Sign Language API!";
+    }
+
     @PostMapping("/register")
-    public JwtResponse registerUser(@RequestBody RegisterRequest request) {
-        return authenticationServiceService.register(request);
+    public MappingResponse registerUser(@RequestBody RegisterRequest request) {
+        JwtResponse token = authenticationServiceService.register(request);
+        return MappingResponse.builder()
+                .status("ok")
+                .body(token)
+                .message("Register successfully")
+                .build();
     }
 
     @PostMapping("/login")
-    public JwtResponse login(@RequestBody LoginRequest request) {
-        return authenticationServiceService.login(request);
+    public MappingResponse login(@RequestBody LoginRequest request) {
+        UserResponse userResponse =   authenticationServiceService.login(request);
+        return MappingResponse.builder()
+                .status("ok")
+                .body(userResponse)
+                .message("Login successfully")
+                .build();
     }
 
     @PostMapping("/refresh-token")
-    public JwtResponse refreshToken(@RequestBody RefreshTokenRequest request) {
-        return authenticationServiceService.refreshToken(request);
+    public MappingResponse refreshToken(@RequestBody RefreshTokenRequest request) {
+        JwtResponse token =  authenticationServiceService.refreshToken(request);
+        return MappingResponse.builder()
+                .status("ok")
+                .body(token)
+                .message("Refresh token successfully")
+                .build();
     }
 }
 

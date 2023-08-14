@@ -1,11 +1,10 @@
 package com.ptit.demo.service;
 
 import com.ptit.demo.component.UserInfoUserDetails;
-import com.ptit.demo.dto.JwtResponse;
-import com.ptit.demo.dto.LoginRequest;
-import com.ptit.demo.dto.RefreshTokenRequest;
-import com.ptit.demo.dto.RegisterRequest;
+import com.ptit.demo.dto.*;
+import com.ptit.demo.entity.Token;
 import com.ptit.demo.entity.User;
+import com.ptit.demo.repository.TokenRepository;
 import com.ptit.demo.repository.UserRepository;
 import com.ptit.demo.user.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,9 @@ public class AuthenticationService {
     @Autowired
     private PasswordEncoder encoder;
     @Autowired
-    private UserRepository repository;
+    private UserRepository userRepository;
+    @Autowired
+    private TokenRepository tokenRepository;
     @Autowired
     private JwtService jwtService;
     @Autowired
@@ -41,16 +42,18 @@ public class AuthenticationService {
                 .roles(List.of(UserRole.ROLE_USER))
                 .build();
 
-        User userExists = repository.findByEmail(user.getEmail()).orElse(null);
+        User userExists = userRepository.findByEmail(user.getEmail()).orElse(null);
         if (userExists != null) {
             throw new RuntimeException("user already exists");
         }
 
-        repository.save(user);
+        var savedUser = userRepository.save(user);
 
         UserInfoUserDetails userDetails = new UserInfoUserDetails(user);
         String accessToken = jwtService.generateToken(userDetails);
         String refreshToken = jwtService.generateRefreshToken(userDetails);
+
+//        saveUserToken(savedUser, accessToken);
 
         return JwtResponse.builder()
                 .accessToken(accessToken)
@@ -58,16 +61,34 @@ public class AuthenticationService {
                 .build();
     }
 
-    public JwtResponse login(LoginRequest request) {
+
+
+    public UserResponse login(LoginRequest request) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );
 
         if (authentication.isAuthenticated()) {
             UserInfoUserDetails userDetails = (UserInfoUserDetails) authentication.getPrincipal();
-            return JwtResponse.builder()
-                    .accessToken(jwtService.generateToken(userDetails))
-                    .refreshToken(jwtService.generateRefreshToken(userDetails))
+
+            var user = userRepository.findByEmail(request.getUsername())
+                    .orElseThrow();
+
+            String accessToken = jwtService.generateToken(userDetails);
+            String refreshToken = jwtService.generateRefreshToken(userDetails);
+
+//            revokeAllUserTokens(user);
+//            saveUserToken(user, accessToken);
+
+           JwtResponse token = JwtResponse.builder()
+                    .accessToken(accessToken)
+                    .refreshToken(refreshToken)
+                    .build();
+
+              return UserResponse.builder()
+                    .name(user.getName())
+                    .email(user.getEmail())
+                    .token(token)
                     .build();
         } else {
             throw new UsernameNotFoundException("invalid login request! Please check the your username and password");
@@ -81,12 +102,39 @@ public class AuthenticationService {
         }
 
         String username = jwtService.extractUsername(request.getToken());
-        UserInfoUserDetails userDetails = repository.findByEmail(username).map(UserInfoUserDetails::new)
+        UserInfoUserDetails userDetails = userRepository.findByEmail(username).map(UserInfoUserDetails::new)
                 .orElseThrow(() -> new UsernameNotFoundException("user not found with username: " + username));
 
         return JwtResponse.builder()
                 .accessToken(jwtService.generateToken(userDetails))
                 .refreshToken(request.getToken())
                 .build();
+    }
+
+    private void revokeAllUserTokens(User user) {
+        var validUserTokens = tokenRepository.findAllValidTokenByUser(user.getId());
+
+        if (validUserTokens.isEmpty()) {
+            return;
+        }
+
+        validUserTokens.forEach(token -> {
+            token.setExpired(true);
+            token.setRevoked(true);
+
+        });
+
+        tokenRepository.saveAll(validUserTokens);
+    }
+
+    private void saveUserToken(User user, String accessToken) {
+        Token saveUserToken = Token.builder()
+                .user(user)
+                .token(accessToken)
+                .revoked(false)
+                .expired(false)
+                .build();
+        tokenRepository.save(saveUserToken);
+
     }
 }
