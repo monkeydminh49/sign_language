@@ -1,3 +1,9 @@
+server:
+  port: 8089
+bezkoder:
+  openapi:
+    dev-url: http://localhost:8089
+    prod-url: http://117.6.133.148:8089/
 spring:
   datasource:
     url: jdbc:postgresql://117.6.133.148:5433/sign_language
