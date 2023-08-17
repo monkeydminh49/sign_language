@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://117.6.133.148:5433/sign_language
+    username: sign_language
+    password: sign_language
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 531c7c9f715b0e4b92d14a0f9599a3fa1e91cb83d7836a34ec0e030ecedb218d
+      expiration: 120000 # 2 minutes
+      refresh-token:
+        expiration: 300000 # 5 minutes
+
