@@ -15,10 +15,4 @@ public class FileUtils {
             return  null;
         }
     }
-
-//    public static void main(String[] args) {
-//        JsonNode test = getFileResourceAsJson("data/data.json");
-//        assert test != null;
-//        System.out.println(test.asText());
-//    }
 }
