@@ -65,13 +65,13 @@ public class AuthenticationService {
 
     public UserResponse login(LoginRequest request) {
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
         );
 
         if (authentication.isAuthenticated()) {
             UserInfoUserDetails userDetails = (UserInfoUserDetails) authentication.getPrincipal();
 
-            var user = userRepository.findByEmail(request.getUsername())
+            var user = userRepository.findByEmail(request.getEmail())
                     .orElseThrow();
 
             String accessToken = jwtService.generateToken(userDetails);

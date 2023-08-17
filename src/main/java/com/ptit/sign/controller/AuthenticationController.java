@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticationController {
 
     @Autowired
-    private AuthenticationService authenticationServiceService;
+    private AuthenticationService authenticationService;
 
     @GetMapping("/hello")
     public String hello() {
@@ -21,7 +21,7 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public MappingResponse registerUser(@RequestBody RegisterRequest request) {
-        JwtResponse token = authenticationServiceService.register(request);
+        JwtResponse token = authenticationService.register(request);
         return MappingResponse.builder()
                 .status("ok")
                 .body(token)
@@ -31,7 +31,7 @@ public class AuthenticationController {
 
     @PostMapping("/login")
     public MappingResponse login(@RequestBody LoginRequest request) {
-        UserResponse userResponse =   authenticationServiceService.login(request);
+        UserResponse userResponse =   authenticationService.login(request);
         return MappingResponse.builder()
                 .status("ok")
                 .body(userResponse)
@@ -41,7 +41,7 @@ public class AuthenticationController {
 
     @PostMapping("/refresh-token")
     public MappingResponse refreshToken(@RequestBody RefreshTokenRequest request) {
-        JwtResponse token =  authenticationServiceService.refreshToken(request);
+        JwtResponse token =  authenticationService.refreshToken(request);
         return MappingResponse.builder()
                 .status("ok")
                 .body(token)
