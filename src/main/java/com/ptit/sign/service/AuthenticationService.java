@@ -33,7 +33,7 @@ public class AuthenticationService {
     private JwtService jwtService;
     @Autowired
     private AuthenticationManager authenticationManager;
-    public JwtResponse register(RegisterRequest request) {
+    public UserResponse register(RegisterRequest request) {
 
         var user = User.builder()
                 .name(request.getName())
@@ -55,9 +55,17 @@ public class AuthenticationService {
 
 //        saveUserToken(savedUser, accessToken);
 
-        return JwtResponse.builder()
+        JwtResponse token = JwtResponse.builder()
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
+                .build();
+
+        return UserResponse.builder()
+                .id(savedUser.getId())
+                .name(savedUser.getName())
+                .email(savedUser.getEmail())
+                .roles(savedUser.getRoles())
+                .token(token)
                 .build();
     }
 
@@ -86,8 +94,10 @@ public class AuthenticationService {
                     .build();
 
               return UserResponse.builder()
+                    .id(user.getId())
                     .name(user.getName())
                     .email(user.getEmail())
+                    .roles(user.getRoles())
                     .token(token)
                     .build();
         } else {

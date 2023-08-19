@@ -21,10 +21,10 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public MappingResponse registerUser(@RequestBody RegisterRequest request) {
-        JwtResponse token = authenticationService.register(request);
+        UserResponse userResponse = authenticationService.register(request);
         return MappingResponse.builder()
                 .status("ok")
-                .body(token)
+                .body(userResponse)
                 .message("Register successfully")
                 .build();
     }
