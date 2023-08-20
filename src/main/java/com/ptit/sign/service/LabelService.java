@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class LabelService {
@@ -14,11 +15,15 @@ public class LabelService {
     private LabelRepository labelRepository;
 
     public List<Label> getLabelsByLevelsAndSubjects(String levels, String subjects) {
-        List<String> levelList = (levels != null && !levels.isEmpty()) ?
-                List.of(levels.split(",\\s*"))
+        List<Long> levelList = (levels != null && !levels.isEmpty()) ?
+                Stream.of(levels.split(",\\s*"))
+                        .map(Long::parseLong)
+                        .toList()
                 : null;
-        List<String> subjectList = (subjects != null && !subjects.isEmpty()) ?
-                List.of(subjects.split(",\\s*"))
+        List<Long> subjectList = (subjects != null && !subjects.isEmpty()) ?
+                Stream.of(subjects.split(",\\s*"))
+                        .map(Long::parseLong)
+                        .toList()
                 : null;
         return labelRepository.findByLevelsAndSubjects(levelList, subjectList);
     }

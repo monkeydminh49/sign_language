@@ -31,12 +31,5 @@ public class Label {
     @Column(name = "level_id")
     private long levelId;
 
-    @ManyToOne
-    @JoinColumn(insertable=false, updatable=false)
-    private Level level;
-
-    @ManyToOne
-    @JoinColumn(insertable=false, updatable=false)
-    private Subject subject;
 }
 

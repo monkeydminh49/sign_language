@@ -1,9 +1,6 @@
 package com.ptit.sign.repository;
 
 import com.ptit.sign.entity.Label;
-import com.ptit.sign.entity.Level;
-import com.ptit.sign.entity.Subject;
-import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -19,17 +16,14 @@ public interface LabelRepository extends JpaRepository<Label, Long> ,
 {
     Label findByLabelEnAndLabelVn(String labelEn, String LabelVn);
 
-    default List<Label> findByLevelsAndSubjects (List <String> levelList, List<String> subjectList){
+    default List<Label> findByLevelsAndSubjects (List <Long> levelList, List<Long> subjectList){
         Specification<Label> specification = (root, cq, cb) -> {
-            Join<Label, Level> levelJoin = root.join("level");
-            Join<Label, Subject> subjectJoin = root.join("subject");
-
             ArrayList<Predicate> predicates = new ArrayList<>();
             if (levelList != null && !levelList.isEmpty()) {
-                predicates.add( levelJoin.get("name").in(levelList));
+                predicates.add( root.get("level_id").in(levelList));
             }
             if (subjectList != null && !subjectList.isEmpty()) {
-                predicates.add( subjectJoin.get("name").in(subjectList));
+                predicates.add( root.get("subject_id").in(subjectList));
             }
             return cb.and(predicates.toArray(new Predicate[0]));
         };
