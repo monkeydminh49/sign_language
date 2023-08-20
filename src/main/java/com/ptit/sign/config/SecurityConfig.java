@@ -44,6 +44,7 @@ public class SecurityConfig {
                                                 "/api/v1/register",
                                                 "/api/v1/login",
                                                 "/api/v1/predict",
+                                                "/api/v1/label",
                                                 "/api/v1/refresh-token",
                                                 "/api/v1/auth/**",
                                                 "/v3/api-docs/**",
