@@ -46,6 +46,7 @@ public class SecurityConfig {
                                                 "/api/v1/predict",
                                                 "/api/v1/subject",
                                                 "/api/v1/refresh-token",
+                                                "/api/v1/level",
                                                 "/api/v1/auth/**",
                                                 "/v3/api-docs/**",
                                                 "/swagger-ui/**"
