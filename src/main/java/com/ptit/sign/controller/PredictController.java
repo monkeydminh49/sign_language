@@ -19,7 +19,7 @@ public class PredictController {
     private PredictService predictService;
 
     @PostMapping("/predict")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
     public MappingResponse uploadFile(
             @RequestParam("file") MultipartFile multipartFile){
         JsonNode predictResponse = predictService.predictVideoToText(multipartFile);

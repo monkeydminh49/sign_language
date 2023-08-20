@@ -21,10 +21,10 @@ public class LabelController {
     @GetMapping("/label")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
     public MappingResponse getLabelsByLevelsAndSubjects(
-            @RequestParam(name="levels", required = false) String levels,
-            @RequestParam(name="subjects", required = false) String subjects
+            @RequestParam(name="levelId", required = false) String levelId,
+            @RequestParam(name="subjectId", required = false) String subjectId
     ) {
-        List<Label> labels = labelService.getLabelsByLevelsAndSubjects(levels, subjects);
+        List<Label> labels = labelService.getLabelsByLevelsAndSubjects(levelId, subjectId);
         return MappingResponse.builder()
                 .status("ok")
                 .body(labels)
