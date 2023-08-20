@@ -53,7 +53,8 @@ public class SecurityConfig {
                                                     "api/v1/predict",
                                                     "/api/v1/subject",
                                                     "/api/v1/level",
-                                                    "/api/v1/label"
+                                                    "/api/v1/label",
+                                                    "/api/v1/video"
                                     )
                                     .authenticated()
                         )

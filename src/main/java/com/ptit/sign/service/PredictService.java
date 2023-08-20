@@ -3,13 +3,8 @@ package com.ptit.sign.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -20,8 +15,11 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class PredictService {
 
-    @Value("${predict.url}")
-    private String serverUrl;
+    @Value("${predict.videoToTexturl}")
+    private String serverPredictUrl;
+
+    @Value("${predict.videoFromTextUrl}")
+    private String serverVideoUrl;
 
     @Value("${predict.api-key}")
     private String apiKey;
@@ -38,7 +36,25 @@ public class PredictService {
                     = new HttpEntity<>(body, headers);
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<String> response = restTemplate
-                    .postForEntity(serverUrl, requestEntity, String.class);
+                    .postForEntity(serverPredictUrl, requestEntity, String.class);
+            ObjectMapper mapper = new ObjectMapper();
+            result = mapper.readTree(response.getBody());
+        }catch (Exception e){
+            log.error(e.getMessage(), e);
+        }
+        return result;
+    }
+
+    public JsonNode getVideoFromText(String label){
+        JsonNode result = null;
+        try {
+            String urlVideo = serverVideoUrl + "?action=" + label;
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+            headers.add("APIKEY", apiKey);
+            HttpEntity<String> entity = new HttpEntity<> (headers);
+            RestTemplate restTemplate = new RestTemplate();
+            ResponseEntity<String> response = restTemplate.exchange(urlVideo, HttpMethod.GET, entity, String.class);
             ObjectMapper mapper = new ObjectMapper();
             result = mapper.readTree(response.getBody());
         }catch (Exception e){

@@ -7,7 +7,8 @@ bezkoder:
     prod-url: http://117.6.133.148:8089/
 
 predict:
-  url: http://ptitsignlanguage.edu.vn/signlanguage/predict
+  videoToTexturl: http://ptitsignlanguage.edu.vn/signlanguage/predict
+  videoFromTextUrl: http://ptitsignlanguage.edu.vn/video
   api-key: W8W6K-3N7KK-PXB9H-8TD8W-BWTH9
 
 spring:
