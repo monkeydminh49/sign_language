@@ -20,10 +20,10 @@ public interface LabelRepository extends JpaRepository<Label, Long> ,
         Specification<Label> specification = (root, cq, cb) -> {
             ArrayList<Predicate> predicates = new ArrayList<>();
             if (levelList != null && !levelList.isEmpty()) {
-                predicates.add( root.get("level_id").in(levelList));
+                predicates.add( root.get("levelId").in(levelList));
             }
             if (subjectList != null && !subjectList.isEmpty()) {
-                predicates.add( root.get("subject_id").in(subjectList));
+                predicates.add( root.get("subjectId").in(subjectList));
             }
             return cb.and(predicates.toArray(new Predicate[0]));
         };
