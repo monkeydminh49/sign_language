@@ -2,12 +2,10 @@ package com.ptit.sign.entity;
 
 import com.ptit.sign.user.UserRole;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.List;
 
 @Builder
@@ -32,9 +30,12 @@ public class User {
     private String password;
     @Enumerated(EnumType.STRING)
     private List<UserRole> roles;
-
-    @OneToMany(mappedBy = "user")
-    private List<Token> tokens;
+    private Date dateOfBirth;
+    private String address;
+    private String phoneNumber;
+    private String language;
+    private String supportedBy;
+    private String registerType;
 
 }
 

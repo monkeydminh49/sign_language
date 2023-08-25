@@ -66,10 +66,14 @@ public class AuthenticationService {
                 .email(savedUser.getEmail())
                 .roles(savedUser.getRoles())
                 .token(token)
+                .dateOfBirth(savedUser.getDateOfBirth())
+                .address(savedUser.getAddress())
+                .phoneNumber(savedUser.getPhoneNumber())
+                .language(savedUser.getLanguage())
+                .supportedBy(savedUser.getSupportedBy())
+                .registerType(savedUser.getRegisterType())
                 .build();
     }
-
-
 
     public UserResponse login(LoginRequest request) {
         Authentication authentication = authenticationManager.authenticate(
@@ -99,6 +103,12 @@ public class AuthenticationService {
                     .email(user.getEmail())
                     .roles(user.getRoles())
                     .token(token)
+                    .dateOfBirth(user.getDateOfBirth())
+                    .address(user.getAddress())
+                    .phoneNumber(user.getPhoneNumber())
+                    .language(user.getLanguage())
+                    .supportedBy(user.getSupportedBy())
+                    .registerType(user.getRegisterType())
                     .build();
         } else {
             throw new UsernameNotFoundException("invalid login request! Please check the your username and password");
