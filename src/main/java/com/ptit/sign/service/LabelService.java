@@ -14,7 +14,7 @@ public class LabelService {
     @Autowired
     private LabelRepository labelRepository;
 
-    public List<Label> getLabelsByLevelsAndSubjects(String levels, String subjects) {
+    public List<Label> getLabelsByLevelIdsAndSubjectIds(String levels, String subjects) {
         List<Long> levelList = (levels != null && !levels.isEmpty()) ?
                 Stream.of(levels.split(",\\s*"))
                         .map(Long::parseLong)
@@ -26,5 +26,9 @@ public class LabelService {
                         .toList()
                 : null;
         return labelRepository.findByLevelsAndSubjects(levelList, subjectList);
+    }
+
+    public List<Label> getLabelsBySubjectId(Long subjectId) {
+        return labelRepository.findAllBySubjectId(subjectId);
     }
 }
