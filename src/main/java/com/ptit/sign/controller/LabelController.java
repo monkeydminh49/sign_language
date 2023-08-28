@@ -2,7 +2,9 @@ package com.ptit.sign.controller;
 
 import com.ptit.sign.dto.MappingResponse;
 import com.ptit.sign.entity.Label;
+import com.ptit.sign.entity.Level;
 import com.ptit.sign.service.LabelService;
+import com.ptit.sign.service.LevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -12,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RestController
@@ -23,6 +23,9 @@ public class LabelController {
 
     @Autowired
     private LabelService labelService;
+
+    @Autowired
+    private LevelService levelService;
 
     @GetMapping("/label")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
@@ -38,27 +41,22 @@ public class LabelController {
                 .build();
     }
 
-    @GetMapping("/labels-by-subjectId")
+    @GetMapping("/list-labels-by-subjectId")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
-    public MappingResponse getLabelsBySubjectId(
+    public MappingResponse getListLabelsBySubjectId(
             @RequestParam(name="subjectId") String subjectId
     ) {
-        List<Label> labels = labelService.getLabelsBySubjectId(Long.parseLong(subjectId));
+        List<Level> levels = levelService.getLevels();
+        List<List<Label>> lableList = new ArrayList<>();
 
-        Map<String, List<Label>> map = new HashMap<>();
-        for (Label label : labels) {
-            String key = String.valueOf(label.getLevelId());
-            if (map.containsKey(key)) {
-                map.get(key).add(label);
-            } else {
-                map.put(key, new ArrayList<>());
-                map.get(key).add(label);
-            }
+        for (Level level : levels) {
+            List<Label> labels = labelService.getLabelsByLevelIdsAndSubjectIds(level.getId().toString(), subjectId);
+            lableList.add(labels);
         }
 
         return MappingResponse.builder()
                 .status("ok")
-                .body(map)
+                .body(lableList)
                 .message("Get labels successfully")
                 .build();
     }

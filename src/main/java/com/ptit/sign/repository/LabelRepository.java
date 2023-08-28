@@ -29,6 +29,4 @@ public interface LabelRepository extends JpaRepository<Label, Long> ,
         };
         return findAll(specification);
     }
-
-    List<Label> findAllBySubjectId(long subjectId);
 }
