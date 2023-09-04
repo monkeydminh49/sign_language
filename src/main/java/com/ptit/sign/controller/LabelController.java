@@ -5,6 +5,7 @@ import com.ptit.sign.entity.Label;
 import com.ptit.sign.entity.Level;
 import com.ptit.sign.service.LabelService;
 import com.ptit.sign.service.LevelService;
+import com.ptit.sign.service.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RestController
@@ -27,6 +30,9 @@ public class LabelController {
     @Autowired
     private LevelService levelService;
 
+    @Autowired
+    private SubjectService subjectService;
+
     @GetMapping("/label")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
     public MappingResponse getLabelsByLevelIdsAndSubjectIds(
@@ -34,6 +40,7 @@ public class LabelController {
             @RequestParam(name="subjectIds", required = false) String subjectIds
     ) {
         List<Label> labels = labelService.getLabelsByLevelIdsAndSubjectIds(levelIds, subjectIds);
+
         return MappingResponse.builder()
                 .status("ok")
                 .body(labels)
@@ -47,16 +54,35 @@ public class LabelController {
             @RequestParam(name="subjectId") String subjectId
     ) {
         List<Level> levels = levelService.getLevels();
-        List<List<Label>> lableList = new ArrayList<>();
+        List<Object> levelList = new ArrayList<>();
+
+        Map<String, Object> body = new HashMap<>();
+
+        int total = 0;
+
+
+        body.put("subjectId", subjectId);
+        body.put("subjectName", subjectService.getSubjectById(Long.parseLong(subjectId)).getName());
 
         for (Level level : levels) {
             List<Label> labels = labelService.getLabelsByLevelIdsAndSubjectIds(level.getId().toString(), subjectId);
-            lableList.add(labels);
+            if (labels != null && !labels.isEmpty()) {
+                total += 1;
+                Object levelObj = new Object() {
+                    public final String levelId = level.getId().toString();
+                    public final List<Label> listLabel = labels;
+                };
+                levelList.add(levelObj);
+
+            }
         }
+
+        body.put("total", total);
+        body.put("listLevel", levelList);
 
         return MappingResponse.builder()
                 .status("ok")
-                .body(lableList)
+                .body(body)
                 .message("Get labels successfully")
                 .build();
     }
