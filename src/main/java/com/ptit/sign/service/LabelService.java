@@ -14,17 +14,18 @@ public class LabelService {
     @Autowired
     private LabelRepository labelRepository;
 
-    public List<Label> getLabelsByLevelsAndSubjects(String levels, String subjects) {
-        List<Long> levelList = (levels != null && !levels.isEmpty()) ?
-                Stream.of(levels.split(",\\s*"))
+    public List<Label> getLabelsByLevelIdsAndSubjectIds(String levelIds, String subjectIds) {
+        List<Long> levelList = (levelIds != null && !levelIds.isEmpty()) ?
+                Stream.of(levelIds.split(",\\s*"))
                         .map(Long::parseLong)
                         .toList()
                 : null;
-        List<Long> subjectList = (subjects != null && !subjects.isEmpty()) ?
-                Stream.of(subjects.split(",\\s*"))
+        List<Long> subjectList = (subjectIds != null && !subjectIds.isEmpty()) ?
+                Stream.of(subjectIds.split(",\\s*"))
                         .map(Long::parseLong)
                         .toList()
                 : null;
         return labelRepository.findByLevelsAndSubjects(levelList, subjectList);
     }
+
 }

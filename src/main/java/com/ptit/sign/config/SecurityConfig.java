@@ -54,6 +54,7 @@ public class SecurityConfig {
                                                     "/api/v1/subject",
                                                     "/api/v1/level",
                                                     "/api/v1/label",
+                                                    "/api/v1/list-labels-by-subjectId",
                                                     "/api/v1/video"
                                     )
                                     .authenticated()
