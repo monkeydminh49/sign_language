@@ -69,7 +69,7 @@ public class LabelController {
             if (labels != null && !labels.isEmpty()) {
                 total += 1;
                 Object levelObj = new Object() {
-                    public final String levelId = level.getId().toString();
+                    public final Long levelId = level.getId();
                     public final List<Label> listLabel = labels;
                 };
                 levelList.add(levelObj);
