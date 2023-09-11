@@ -35,6 +35,10 @@ public class UserResponse {
 
     public static class UserResponseBuilder {
         public UserResponseBuilder dateOfBirth(Date date) {
+            if (date == null) {
+                return this;
+            }
+
             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             this.dateOfBirth = dateFormat.format(date);
             return this;
