@@ -51,7 +51,7 @@ public class InitConfig {
                 userRepository.save(admin);
             }
 
-            JsonNode initData = FileUtils.getFileResourceAsJson("data/data.json");
+            JsonNode initData = FileUtils.getFileResourceAsJson("data/data_v2.json");
             if (initData != null){
                 for (JsonNode data : initData){
                     if (data.has("Chủ đề")) {

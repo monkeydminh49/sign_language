@@ -1,0 +1,1066 @@
+[
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 1,
+    "Tiếng Việt": "Số 0 ",
+    "Tiếng Anh": "Number 0"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 2,
+    "Tiếng Việt": "Số 1",
+    "Tiếng Anh": "Number 1"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 3,
+    "Tiếng Việt": "Số 2",
+    "Tiếng Anh": "Number 2"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 4,
+    "Tiếng Việt": "Số 3",
+    "Tiếng Anh": "Number 3"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 5,
+    "Tiếng Việt": "Số 4",
+    "Tiếng Anh": "Number 4"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 1,
+    "STT": 6,
+    "Tiếng Việt": "Số 5",
+    "Tiếng Anh": "Number 5"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 2,
+    "STT": 7,
+    "Tiếng Việt": "Số 6",
+    "Tiếng Anh": "Number 6"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 2,
+    "STT": 8,
+    "Tiếng Việt": "Số 7",
+    "Tiếng Anh": "Number 7"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 2,
+    "STT": 9,
+    "Tiếng Việt": "Số 8",
+    "Tiếng Anh": "Number 8"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 2,
+    "STT": 10,
+    "Tiếng Việt": "Số 9",
+    "Tiếng Anh": "Number 9"
+  },
+  {
+    "Chủ đề": "Số đếm",
+    "Cấp độ": 2,
+    "STT": 11,
+    "Tiếng Việt": "Số 10",
+    "Tiếng Anh": "Number 10"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 12,
+    "Tiếng Việt": "Tháng 1",
+    "Tiếng Anh": "January"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 13,
+    "Tiếng Việt": "Tháng 2",
+    "Tiếng Anh": "February"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 14,
+    "Tiếng Việt": "Tháng 3",
+    "Tiếng Anh": "March"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 15,
+    "Tiếng Việt": "Tháng 4",
+    "Tiếng Anh": "April"
+  },
+ {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 16,
+    "Tiếng Việt": "Tháng 5",
+    "Tiếng Anh": "May"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 17,
+    "Tiếng Việt": "Tháng 6",
+    "Tiếng Anh": "June"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 18,
+    "Tiếng Việt": "Tháng 7",
+    "Tiếng Anh": "July"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 19,
+    "Tiếng Việt": "Tháng 8",
+    "Tiếng Anh": "August"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 20,
+    "Tiếng Việt": "Tháng 9",
+    "Tiếng Anh": "September"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 21,
+    "Tiếng Việt": "Tháng 10",
+    "Tiếng Anh": "October"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 22,
+    "Tiếng Việt": "Tháng 11",
+    "Tiếng Anh": "November"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 23,
+    "Tiếng Việt": "Tháng 12",
+    "Tiếng Anh": "December"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 24,
+    "Tiếng Việt": "Giờ",
+    "Tiếng Anh": "Hour"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 25,
+    "Tiếng Việt": "Phút",
+    "Tiếng Anh": "Minute"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 26,
+    "Tiếng Việt": "Giây",
+    "Tiếng Anh": "Second"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 27,
+    "Tiếng Việt": "Năm",
+    "Tiếng Anh": "Year"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 1,
+    "STT": 28,
+    "Tiếng Việt": "Tuần",
+    "Tiếng Anh": "Week"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 29,
+    "Tiếng Việt": "Thứ 2",
+    "Tiếng Anh": "Monday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 30,
+    "Tiếng Việt": "Thứ 3",
+    "Tiếng Anh": "Tuesday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 31,
+    "Tiếng Việt": "Thứ 4",
+    "Tiếng Anh": "Wednesday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 32,
+    "Tiếng Việt": "Thứ 5",
+    "Tiếng Anh": "Thursday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 33,
+    "Tiếng Việt": "Thứ 6",
+    "Tiếng Anh": "Friday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 34,
+    "Tiếng Việt": "Thứ 7",
+    "Tiếng Anh": "Saturday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 35,
+    "Tiếng Việt": "Chủ nhật",
+    "Tiếng Anh": "Sunday"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 36,
+    "Tiếng Việt": "Sáng",
+    "Tiếng Anh": "Morning"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 37,
+    "Tiếng Việt": "Trưa",
+    "Tiếng Anh": "Noon"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 38,
+    "Tiếng Việt": "Chiều",
+    "Tiếng Anh": "Afternoon"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 39,
+    "Tiếng Việt": "Tối",
+    "Tiếng Anh": "Evening"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 40,
+    "Tiếng Việt": "Ban đêm",
+    "Tiếng Anh": "Night"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 41,
+    "Tiếng Việt": "Hôm nay",
+    "Tiếng Anh": "Today"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 42,
+    "Tiếng Việt": "Ban ngày",
+    "Tiếng Anh": "Daytime"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 43,
+    "Tiếng Việt": "Ngày mai",
+    "Tiếng Anh": "Tomorrow"
+  },
+  {
+    "Chủ đề": "Thời gian",
+    "Cấp độ": 2,
+    "STT": 44,
+    "Tiếng Việt": "Hôm qua",
+    "Tiếng Anh": "Yesterday"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 45,
+    "Tiếng Việt": "Ô tô",
+    "Tiếng Anh": "Car"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 46,
+    "Tiếng Việt": "Xe máy",
+    "Tiếng Anh": "Motorbike"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 47,
+    "Tiếng Việt": "Xe đạp",
+    "Tiếng Anh": "Bicycle"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 47,
+    "Tiếng Việt": "Xe đạp",
+    "Tiếng Anh": "Bicycle"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 48,
+    "Tiếng Việt": "Rẽ trái",
+    "Tiếng Anh": "Turn left"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 49,
+    "Tiếng Việt": "Rẽ phải",
+    "Tiếng Anh": "Turn right"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 50,
+    "Tiếng Việt": "Dừng lại",
+    "Tiếng Anh": "Stop"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 1,
+    "STT": 51,
+    "Tiếng Việt": "Chậm lại",
+    "Tiếng Anh": "Slow down"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 52,
+    "Tiếng Việt": "Đi thẳng",
+    "Tiếng Anh": "Go straight"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 53,
+    "Tiếng Việt": "Ở đâu",
+    "Tiếng Anh": "Where"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 54,
+    "Tiếng Việt": "DS Store",
+    "Tiếng Anh": "DS Store"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 55,
+    "Tiếng Việt": "Đi tới đó bằng cách nào",
+    "Tiếng Anh": "How to get there?"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 56,
+    "Tiếng Việt": "Nhà",
+    "Tiếng Anh": "House"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 57,
+    "Tiếng Việt": "Phía trước",
+    "Tiếng Anh": "Front"
+  },
+  {
+    "Chủ đề": "Giao thông",
+    "Cấp độ": 2,
+    "STT": 58,
+    "Tiếng Việt": "Phía sau",
+    "Tiếng Anh": "Behind"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 1,
+    "STT": 59,
+    "Tiếng Việt": "Mẹ",
+    "Tiếng Anh": "Mother"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 1,
+    "STT": 60,
+    "Tiếng Việt": "Bố",
+    "Tiếng Anh": "Father"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 1,
+    "STT": 61,
+    "Tiếng Việt": "Con",
+    "Tiếng Anh": "Child"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 1,
+    "STT": 62,
+    "Tiếng Việt": "Bản thân",
+    "Tiếng Anh": "Myself"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 1,
+    "STT": 63,
+    "Tiếng Việt": "Tôi",
+    "Tiếng Anh": "I"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 2,
+    "STT": 64,
+    "Tiếng Việt": "Anh ấy",
+    "Tiếng Anh": "He"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 2,
+    "STT": 65,
+    "Tiếng Việt": "Họ",
+    "Tiếng Anh": "They"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 2,
+    "STT": 66,
+    "Tiếng Việt": "Bạn",
+    "Tiếng Anh": "You"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 2,
+    "STT": 67,
+    "Tiếng Việt": "Chúng ta",
+    "Tiếng Anh": "We"
+  },
+  {
+    "Chủ đề": "Đại từ nhân xưng",
+    "Cấp độ": 2,
+    "STT": 68,
+    "Tiếng Việt": "Cô ấy",
+    "Tiếng Anh": "She"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 69,
+    "Tiếng Việt": "Cơ thể",
+    "Tiếng Anh": "Body"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 70,
+    "Tiếng Việt": "Lưng",
+    "Tiếng Anh": "Back"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 71,
+    "Tiếng Việt": "Bàn tay",
+    "Tiếng Anh": "Hand"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 72,
+    "Tiếng Việt": "Chân",
+    "Tiếng Anh": "Leg"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 73,
+    "Tiếng Việt": "Cánh tay",
+    "Tiếng Anh": "Arm"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 74,
+    "Tiếng Việt": "Ngón tay",
+    "Tiếng Anh": "Finger"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 75,
+    "Tiếng Việt": "Bụng",
+    "Tiếng Anh": "Stomach"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 1,
+    "STT": 76,
+    "Tiếng Việt": "Đầu",
+    "Tiếng Anh": "Head"
+  },
+ {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 77,
+    "Tiếng Việt": "Lưng",
+    "Tiếng Anh": "Back"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 78,
+    "Tiếng Việt": "Bệnh viện",
+    "Tiếng Anh": "Hospital"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 79,
+    "Tiếng Việt": "Giường",
+    "Tiếng Anh": "Bed"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 80,
+    "Tiếng Việt": "Khuyết tật",
+    "Tiếng Anh": "Disability"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 81,
+    "Tiếng Việt": "Cứu",
+    "Tiếng Anh": "Aid"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 82,
+    "Tiếng Việt": "Đau bụng",
+    "Tiếng Anh": "Stomache"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 83,
+    "Tiếng Việt": "Tôi bị ốm",
+    "Tiếng Anh": "I am sick"
+  },
+  {
+    "Chủ đề": "Y tế",
+    "Cấp độ": 2,
+    "STT": 84,
+    "Tiếng Việt": "Tôi cần đi bệnh viện",
+    "Tiếng Anh": "I need to go to the hospital"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 1,
+    "STT": 85,
+    "Tiếng Việt": "Ăn",
+    "Tiếng Anh": "Eat"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 1,
+    "STT": 86,
+    "Tiếng Việt": "Uống",
+    "Tiếng Anh": "Drink"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 1,
+    "STT": 87,
+    "Tiếng Việt": "Mua",
+    "Tiếng Anh": "Buy"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 1,
+    "STT": 88,
+    "Tiếng Việt": "Thịt",
+    "Tiếng Anh": "Meat"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 1,
+    "STT": 89,
+    "Tiếng Việt": "Cá",
+    "Tiếng Anh": "Fish"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 2,
+    "STT": 90,
+    "Tiếng Việt": "Rau",
+    "Tiếng Anh": "Vegetable"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 2,
+    "STT": 91,
+    "Tiếng Việt": "Gạo",
+    "Tiếng Anh": "Rice"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 2,
+    "STT": 92,
+    "Tiếng Việt": "Thức ăn",
+    "Tiếng Anh": "Food"
+  },
+  {
+    "Chủ đề": "Nấu ăn",
+    "Cấp độ": 2,
+    "STT": 93,
+    "Tiếng Việt": "Nước",
+    "Tiếng Anh": "Water"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 1,
+    "STT": 94,
+    "Tiếng Việt": "Tạm biệt",
+    "Tiếng Anh": "Goodbye"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 1,
+    "STT": 95,
+    "Tiếng Việt": "Xin chào",
+    "Tiếng Anh": "Hello"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 1,
+    "STT": 96,
+    "Tiếng Việt": "Chào",
+    "Tiếng Anh": "Hi"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 1,
+    "STT": 97,
+    "Tiếng Việt": "Mời vào",
+    "Tiếng Anh": "Come in"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 98,
+    "Tiếng Việt": "Bạn khỏe không?",
+    "Tiếng Anh": "How are you?"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 99,
+    "Tiếng Việt": "Gặp lại sau nhé",
+    "Tiếng Anh": "See you later"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 100,
+    "Tiếng Việt": "Bạn bao nhiêu tuổi?",
+    "Tiếng Anh": "How old are you?"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 101,
+    "Tiếng Việt": "Giữ gìn sức khỏe nhé",
+    "Tiếng Anh": "Hope you are fine"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 102,
+    "Tiếng Việt": "Bạn tên là gì?",
+    "Tiếng Anh": "What is your name?"
+  },
+  {
+    "Chủ đề": "Cảm xúc",
+    "Cấp độ": 1,
+    "STT": 103,
+    "Tiếng Việt": "Ghét",
+    "Tiếng Anh": "Hate"
+  },
+  {
+    "Chủ đề": "Cảm xúc",
+    "Cấp độ": 1,
+    "STT": 104,
+    "Tiếng Việt": "Nổi giận",
+    "Tiếng Anh": "Angry"
+  },
+  {
+    "Chủ đề": "Cảm xúc",
+    "Cấp độ": 1,
+    "STT": 105,
+    "Tiếng Việt": "Xấu hổ",
+    "Tiếng Anh": "Shy"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 106,
+    "Tiếng Việt": "Xúc động",
+    "Tiếng Anh": "Emotional"
+  },
+  {
+    "Chủ đề": "Giao tiếp hàng ngày",
+    "Cấp độ": 2,
+    "STT": 107,
+    "Tiếng Việt": "Yêu",
+    "Tiếng Anh": "Love"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 108,
+    "Tiếng Việt": "Ghế",
+    "Tiếng Anh": "Chair"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 109,
+    "Tiếng Việt": "Giáo viên",
+    "Tiếng Anh": "Teacher"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 110,
+    "Tiếng Việt": "Hướng dẫn",
+    "Tiếng Anh": "Guide"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 111,
+    "Tiếng Việt": "Bàn",
+    "Tiếng Anh": "Desk"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 112,
+    "Tiếng Việt": "Có thể",
+    "Tiếng Anh": "Can"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 2,
+    "STT": 113,
+    "Tiếng Việt": "Trường học",
+    "Tiếng Anh": "School"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 2,
+    "STT": 114,
+    "Tiếng Việt": "Thức dậy",
+    "Tiếng Anh": "Wake up"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 2,
+    "STT": 115,
+    "Tiếng Việt": "Hỏi",
+    "Tiếng Anh": "Ask"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 2,
+    "STT": 116,
+    "Tiếng Việt": "Học sinh",
+    "Tiếng Anh": "Student"
+  },
+  {
+    "Chủ đề": "Trường học",
+    "Cấp độ": 1,
+    "STT": 117,
+    "Tiếng Việt": "Bạn thân",
+    "Tiếng Anh": "Best friend"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 118,
+    "Tiếng Việt": "Thấp",
+    "Tiếng Anh": "Short"
+  },
+ {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 119,
+    "Tiếng Việt": "To",
+    "Tiếng Anh": "Big"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 120,
+    "Tiếng Việt": "Giỏi",
+    "Tiếng Anh": "Good"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 121,
+    "Tiếng Việt": "Xa",
+    "Tiếng Anh": "Far"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 122,
+    "Tiếng Việt": "Cao",
+    "Tiếng Anh": "Tall"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 123,
+    "Tiếng Việt": "Dễ",
+    "Tiếng Anh": "Easy"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 1,
+    "STT": 124,
+    "Tiếng Việt": "Xấu",
+    "Tiếng Anh": "Ugly"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 125,
+    "Tiếng Việt": "Đẹp",
+    "Tiếng Anh": "Beautiful"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 126,
+    "Tiếng Việt": "Khó",
+    "Tiếng Anh": "Difficult"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 127,
+    "Tiếng Việt": "Gần",
+    "Tiếng Anh": "Near"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 128,
+    "Tiếng Việt": "Nhỏ",
+    "Tiếng Anh": "Small"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 129,
+    "Tiếng Việt": "Đúng",
+    "Tiếng Anh": "Right"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 130,
+    "Tiếng Việt": "Sai",
+    "Tiếng Anh": "Wrong"
+  },
+  {
+    "Chủ đề": "Mức độ",
+    "Cấp độ": 2,
+    "STT": 131,
+    "Tiếng Việt": "Nặng",
+    "Tiếng Anh": "Heavy"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 132,
+    "Tiếng Việt": "Hiểu",
+    "Tiếng Anh": "Understand"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 133,
+    "Tiếng Việt": "Đến",
+    "Tiếng Anh": "Come"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 134,
+    "Tiếng Việt": "Nói",
+    "Tiếng Anh": "Talk"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 135,
+    "Tiếng Việt": "Nhầm",
+    "Tiếng Anh": "Mistake"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 136,
+    "Tiếng Việt": "Nghe",
+    "Tiếng Anh": "Hear"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 137,
+    "Tiếng Việt": "Khóc",
+    "Tiếng Anh": "Cry"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 138,
+    "Tiếng Việt": "Lấy",
+    "Tiếng Anh": "Take"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 139,
+    "Tiếng Việt": "Đi",
+    "Tiếng Anh": "Go"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 1,
+    "STT": 140,
+    "Tiếng Việt": "Đồng ý",
+    "Tiếng Anh": "Agree"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 141,
+    "Tiếng Việt": "Biết",
+    "Tiếng Anh": "Know"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 142,
+    "Tiếng Việt": "Nghĩ",
+    "Tiếng Anh": "Think"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 143,
+    "Tiếng Việt": "Cho tặng",
+    "Tiếng Anh": "Give"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 144,
+    "Tiếng Việt": "Cười",
+    "Tiếng Anh": "Smile"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 145,
+    "Tiếng Việt": "Cảm ơn",
+    "Tiếng Anh": "Thank"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 146,
+    "Tiếng Việt": "Sử dụng",
+    "Tiếng Anh": "Use"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 147,
+    "Tiếng Việt": "Sử dụng",
+    "Tiếng Anh": "Use"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 147,
+    "Tiếng Việt": "Xin lỗi",
+    "Tiếng Anh": "Sorry"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 148,
+    "Tiếng Việt": "Làm",
+    "Tiếng Anh": "Make"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 149,
+    "Tiếng Việt": "Nhìn",
+    "Tiếng Anh": "Look"
+  },
+  {
+    "Chủ đề": "Hoạt động hàng ngày",
+    "Cấp độ": 2,
+    "STT": 150,
+    "Tiếng Việt": "Muốn",
+    "Tiếng Anh": "Want"
+  }
+]

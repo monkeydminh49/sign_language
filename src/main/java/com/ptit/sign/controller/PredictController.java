@@ -39,4 +39,38 @@ public class PredictController {
                 .message("")
                 .build();
     }
+
+    @PostMapping("/checkVideo")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
+    public MappingResponse checkVideo(
+            @RequestParam("file") MultipartFile multipartFile,
+            @RequestParam("label") String label
+    ){
+        String actionName = "";
+        float actionScore = 0;
+        JsonNode predictResponse = predictService.predictVideoToText(multipartFile);
+        if (predictResponse.has("prediction") && predictResponse.has("status")){
+            boolean status = predictResponse.get("status").asBoolean();
+            if (status){
+                JsonNode predictionNode = predictResponse.get("prediction");
+                if (predictionNode != null) {
+                    for (JsonNode predictNode : predictionNode) {
+                        if (predictNode != null && predictNode.has("action_name") && predictNode.has("action_score")) {
+                            String actionNameTmp = predictNode.get("action_name").asText("");
+                            float actionScoreTmp = predictNode.get("action_score").floatValue();
+                            if (actionScoreTmp > actionScore){
+                                actionName = actionNameTmp;
+                                actionScore = actionScoreTmp;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return MappingResponse.builder()
+                .status("ok")
+                .body(predictResponse)
+                .message("")
+                .build();
+    }
 }
