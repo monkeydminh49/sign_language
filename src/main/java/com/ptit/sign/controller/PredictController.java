@@ -1,8 +1,12 @@
 package com.ptit.sign.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.ptit.sign.dto.CheckVideoResponse;
 import com.ptit.sign.dto.MappingResponse;
+import com.ptit.sign.repository.LabelRepository;
+import com.ptit.sign.repository.UserScoreRepository;
 import com.ptit.sign.service.PredictService;
+import com.ptit.sign.service.UserInfoDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,7 +18,11 @@ import org.springframework.web.multipart.MultipartFile;
 public class PredictController {
 
     @Autowired
+    public UserInfoDetailsService userDetailsService;
+
+    @Autowired
     private PredictService predictService;
+
 
     @PostMapping("/predict")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
@@ -46,30 +54,10 @@ public class PredictController {
             @RequestParam("file") MultipartFile multipartFile,
             @RequestParam("label") String label
     ){
-        String actionName = "";
-        float actionScore = 0;
-        JsonNode predictResponse = predictService.predictVideoToText(multipartFile);
-        if (predictResponse.has("prediction") && predictResponse.has("status")){
-            boolean status = predictResponse.get("status").asBoolean();
-            if (status){
-                JsonNode predictionNode = predictResponse.get("prediction");
-                if (predictionNode != null) {
-                    for (JsonNode predictNode : predictionNode) {
-                        if (predictNode != null && predictNode.has("action_name") && predictNode.has("action_score")) {
-                            String actionNameTmp = predictNode.get("action_name").asText("");
-                            float actionScoreTmp = predictNode.get("action_score").floatValue();
-                            if (actionScoreTmp > actionScore){
-                                actionName = actionNameTmp;
-                                actionScore = actionScoreTmp;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        CheckVideoResponse checkVideoResponse = predictService.checkVideo(multipartFile, label);
         return MappingResponse.builder()
                 .status("ok")
-                .body(predictResponse)
+                .body(checkVideoResponse)
                 .message("")
                 .build();
     }

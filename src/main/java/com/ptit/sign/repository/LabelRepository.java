@@ -16,6 +16,8 @@ public interface LabelRepository extends JpaRepository<Label, Long> ,
 {
     Label findByLabelEnAndLabelVn(String labelEn, String LabelVn);
 
+    Label findByLabelEnEqualsIgnoreCaseOrLabelVnEqualsIgnoreCase(String labelEn, String LabelVn);
+
     default List<Label> findByLevelsAndSubjects (List <Long> levelList, List<Long> subjectList){
         Specification<Label> specification = (root, cq, cb) -> {
             ArrayList<Predicate> predicates = new ArrayList<>();
