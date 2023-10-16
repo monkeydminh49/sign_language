@@ -11,8 +11,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserScore implements Serializable {
+public class UserScoreResponse implements Serializable {
     private long userId;
     private String userName;
-    private float score;
+    private Long totalLabel;
+    private Float totalScore;
+    private Float scoreAverage;
 }

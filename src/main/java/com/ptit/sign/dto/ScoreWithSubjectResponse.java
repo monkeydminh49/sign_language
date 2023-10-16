@@ -15,5 +15,5 @@ import java.util.List;
 public class ScoreWithSubjectResponse implements Serializable {
     private boolean status;
     private String message;
-    private List<UserScore> scoreList;
+    private List<UserScoreResponse> scoreList;
 }
