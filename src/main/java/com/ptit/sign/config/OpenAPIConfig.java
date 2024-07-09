@@ -9,7 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
 import java.util.List;
 
 @Configuration
@@ -20,6 +22,12 @@ public class OpenAPIConfig {
 
     @Value("${bezkoder.openapi.prod-url}")
     private String prodUrl;
+
+    private SecurityScheme createAPIKeyScheme() {
+        return new SecurityScheme().type(SecurityScheme.Type.HTTP)
+                .bearerFormat("JWT")
+                .scheme("bearer");
+    }
 
     @Bean
     public OpenAPI myOpenAPI() {
@@ -45,6 +53,9 @@ public class OpenAPIConfig {
                 .description("This API exposes endpoints to manage demo.").termsOfService("https://www.pasanabeysekara.com")
                 .license(mitLicense);
 
-        return new OpenAPI().info(info).servers(List.of(devServer, prodServer));
+        return new OpenAPI().info(info).servers(List.of(devServer, prodServer)) .addSecurityItem(new SecurityRequirement().
+                        addList("Bearer Authentication"))
+                .components(new Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme()));
+
     }
 }

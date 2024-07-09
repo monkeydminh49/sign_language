@@ -18,6 +18,7 @@ public class UserInfoUserDetails implements UserDetails {
     private String name;
     private final String email;
     private final String password;
+    private User user;
     private List<GrantedAuthority> authorities;
 
     public UserInfoUserDetails(User user) {
@@ -25,6 +26,7 @@ public class UserInfoUserDetails implements UserDetails {
         this.name = user.getName();
         this.email = user.getEmail();
         this.password = user.getPassword();
+        this.user = user;
         this.authorities = user.getRoles().stream().map(
                 role -> new SimpleGrantedAuthority(role.name())
         ).collect(Collectors.toList());
