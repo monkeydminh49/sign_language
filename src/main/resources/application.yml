@@ -1,5 +1,5 @@
 server:
-  port: 8089
+  port: 8080
 
 bezkoder:
   openapi:
@@ -7,8 +7,8 @@ bezkoder:
     prod-url: http://117.6.133.148:8089/
 
 predict:
-  videoToTexturl: http://ptitsignlanguage.edu.vn/signlanguage/predict
-  videoFromTextUrl: http://ptitsignlanguage.edu.vn/video
+  videoToTexturl: http://192.168.113.119:5005/signlanguage/predict
+  videoFromTextUrl: http://192.168.113.119:5005/video
   api-key: W8W6K-3N7KK-PXB9H-8TD8W-BWTH9
 
 spring:
@@ -37,7 +37,7 @@ application:
   security:
     jwt:
       secret-key: 531c7c9f715b0e4b92d14a0f9599a3fa1e91cb83d7836a34ec0e030ecedb218d
-      expiration: 1800000 # 30 minutes
+      expiration: 3600000 # 1 hour
       refresh-token:
         expiration: 43200000 # 6 hours
 

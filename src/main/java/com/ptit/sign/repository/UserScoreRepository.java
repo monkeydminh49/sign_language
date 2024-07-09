@@ -21,4 +21,11 @@ public interface UserScoreRepository extends JpaRepository<UserScore, Long> ,
             ", a.total_score as totalScore, a.average " +
             " from GET_USER_LABEL_SCORE(:labelIds) a")
     List<UserLabelScore> getUserLabelScore(String labelIds);
+
+    @Query("SELECT s FROM UserScore s WHERE s.userId = :userId AND s.labelId = :labelId ORDER BY s.actionDate DESC LIMIT 1")
+    UserScore findUserLatestScoreByLabelId(long userId, long labelId);
+
+    @Query("SELECT s FROM UserScore s WHERE s.labelId = :labelId ORDER BY s.score DESC " +
+            "LIMIT :top")
+    List<UserScore> findTopUserScoresOfLabel(Long labelId, int top);
 }
